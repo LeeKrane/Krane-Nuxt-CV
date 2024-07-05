@@ -13,7 +13,7 @@ GitLab:
 
 GitLab self-managed:
 
-`git clone https://gitlab.kradev.at/krane/krane-nuxt-cv.git`
+`git clone https://gitlab.kradev.net/krane/krane-nuxt-cv.git`
 
 ## Navigate to the project directory
 `cd krane-nuxt-cv`
