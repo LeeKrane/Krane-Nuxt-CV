@@ -126,6 +126,9 @@ Example file: `assets/cv-data-template.json`
 }
 ```
 
+## Add your avatar
+Place your profile picture (square) here: `public/avatar.png`
+
 ## Start the development server
 `bun run dev`
 
