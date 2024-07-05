@@ -44,7 +44,7 @@
 							<img v-else-if="link.iconPath === 'gitlab.png'" src="~@/assets/icons/gitlab.png" class="w-5 mr-3" />
 							<img v-else-if="link.iconPath === 'nextcloud.png'" src="~@/assets/icons/nextcloud.png" class="w-5 mr-3" />
 							<img v-else-if="link.iconPath === 'linkedin.png'" src="~@/assets/icons/linkedin.png" class="w-5 mr-3" />
-							<a :href="link.iconPath" target="_blank">
+							<a :href="link.url" target="_blank">
 								{{ link.name }}
 							</a>
 						</li>
