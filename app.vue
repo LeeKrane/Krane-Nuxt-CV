@@ -79,13 +79,13 @@
 			<div class="right-pane w-2/3 bg-gray-200">
 				<section>
 					<h1 class="text-4xl font-bold">{{ cvData.title.fullName }}</h1>
-					<label class="text-xl">{{ cvData.title.role }}</label>
+					<p class="text-xl">{{ cvData.title.role }}</p>
 				</section>
 
 				<section>
 					<h2>Professional Summary</h2>
 					<hr>
-					<label>{{ cvData.title.summary }}</label>
+					<p>{{ cvData.title.summary }}</p>
 				</section>
 
 				<section class="listing">
@@ -97,7 +97,7 @@
 							<div></div>
 							<h2>{{ education.school }}</h2>
 							<h3>{{ education.degree }}</h3>
-							<label>{{ education.start }} - {{ education.active ? "now (graduation expected in " + education.end + ")" : education.end }}</label>
+							<p>{{ education.start }} - {{ education.active ? "now (graduation expected in " + education.end + ")" : education.end }}</p>
 							<ul class="list-disc pl-4 mt-2">
 								<li v-for="text in education.text">{{ text }}</li>
 							</ul>
@@ -114,7 +114,7 @@
 							<div></div>
 							<h2>{{ experience.position }}</h2>
 							<h3>{{ experience.company }}</h3>
-							<label>{{ experience.start }} - {{ experience.active ? "now" : experience.end }}</label>
+							<p>{{ experience.start }} - {{ experience.active ? "now" : experience.end }}</p>
 							<ul class="list-disc pl-4 mt-2">
 								<li v-for="text in experience.text">{{ text }}</li>
 							</ul>
@@ -130,14 +130,14 @@
 							<div></div>
 							<div></div>
 							<h2>{{ project.name }}</h2>
-							<label>{{ project.description }}</label>
+							<p>{{ project.description }}</p>
 						</li>
 					</ul>
 				</section>
 			</div>
 		</div>
 		<div class="flex justify-center items-center w-full h-10 bg-gray-900 text-white gap-12">
-			<label class="text-xl text-center">© Christian Kranabetter 2024</label>
+			<p class="text-xl text-center">© Christian Kranabetter 2024</p>
 		</div>
 	</div>
 </template>
@@ -149,7 +149,6 @@ div.left-pane {
 
 		h2 {
 			@apply text-white;
-		
 		}
 	}
 }
@@ -162,7 +161,7 @@ div.right-pane {
 			@apply text-black;
 		}
 
-		label {
+		p {
 			@apply text-gray-800;
 		}
 
