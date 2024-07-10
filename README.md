@@ -22,107 +22,16 @@ GitLab self-managed:
 `bun i`
 
 ## Create your data
-File: `assets/cv-data.json`
+Files: `assets/public-cv-data.json`, `assets/private-cv-data.json`
 
 ### Data Format
-Example file: `assets/cv-data-template.json`
+You can just replace the public data with yours. For the private data, the format is the following:
+
 ```json
 {
-	"title": {
-		"fullName": "John Doe",
-		"role": "Software Engineer",
-		"summary": "This is a summary of my professional experience."
-	},
-	"personalInformation": {
-		"email": "john.doe@gmail.com",
-		"phone": "+1234567890",
-		"address": "1234 Elm Street, Springfield, IL 62701"
-	},
-	"links": [
-		{
-			"name": "GitHub",
-			"url": "https://www.github.com/",
-			"iconPath": "github.png"
-		},
-		{
-			"name": "GitLab",
-			"url": "https://www.gitlab.com/",
-			"iconPath": "gitlab.png"
-		},
-		{
-			"name": "LinkedIn",
-			"url": "https://www.linkedin.com/",
-			"iconPath": "linkedin.png"
-		}
-	],
-	"languages": [
-		{
-			"name": "English",
-			"level": "Native"
-		},
-		{
-			"name": "German",
-			"level": "Fluent"
-		}
-	],
-	"skills": [
-		"JavaScript",
-		"TypeScript",
-		"Vue.js",
-		"Nuxt.js",
-		"Java"
-	],
-	"hobbies": [
-		"Reading",
-		"Traveling",
-		"Photography"
-	],
-	"education": [
-		{
-			"degree": "Bachelor of Science",
-			"school": "University of Illinois",
-			"location": "Champaign, IL",
-			"start": "06/2015",
-			"end": "09/2019",
-			"active": false,
-			"text": [
-				"Graduated with honors",
-				"Dean's List"
-			]
-		}
-	],
-	"experience": [
-		{
-			"position": "Software Engineer",
-			"company": "Acme Corporation",
-			"location": "Springfield, IL",
-			"start": "04/2019",
-			"end": "05/2022",
-			"tasks": [
-				"Developed new features for the company's web application",
-				"Maintained and improved existing codebase",
-				"Collaborated with team members to meet project deadlines"
-			]
-		},
-		{
-			"position": "Intern",
-			"company": "Tech Company",
-			"location": "Chicago, IL",
-			"start": "09/2023",
-			"active": true,
-			"tasks": [
-				"Assisted with testing and debugging of software applications",
-				"Participated in team meetings and code reviews",
-				"Learned about software development best practices"
-			]
-		}
-	],
-	"projects": [
-		{
-			"name": "Project 1",
-			"description": "This is a description of Project 1."
-		}
-	]
+	"email": "example@gmail.com",
+	"phone": "+123456789",
+	"address": "Iliketrains Street 2, 12345 Nuxtville"
 }
 ```
 

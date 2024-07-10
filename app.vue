@@ -1,175 +1,56 @@
 <script lang="ts" setup>
-	import cvDataRaw from '~/assets/cv-data.json'
+	import publicCVDataRaw from '~/assets/public-cv-data.json'
+	import privateCVDataRaw from '~/assets/private-cv-data.json'
 
-	const cvData: Ref<CVDTO | null> = ref(null)
+	const publicCVData: Ref<PublicCVDTO | null> = ref(null)
+	const privateCVData: Ref<PrivateCVDTO | null> = ref(null)
+
+	const email = computed(() => privateCVData.value?.email)
+	const phone = computed(() => privateCVData.value?.phone)
+	const address = computed(() => privateCVData.value?.address)
+	const links = computed(() => publicCVData.value?.links)
+	const languages = computed(() => publicCVData.value?.languages)
+	const hobbies = computed(() => publicCVData.value?.hobbies)
+	const skills = computed(() => publicCVData.value?.skills)
+
+	const title = computed(() => publicCVData.value?.title)
+	const education = computed(() => publicCVData.value?.education)
+	const experience = computed(() => publicCVData.value?.experience)
+	const internships = computed(() => publicCVData.value?.internships)
+	const projects = computed(() => publicCVData.value?.projects)
 
 	onMounted(() => {
-		cvData.value = cvDataRaw
+		publicCVData.value = publicCVDataRaw
+		privateCVData.value = privateCVDataRaw
 	})
 </script>
 
 <template>
-	<div>
-		<div v-if="cvData" class="flex bg-gray-100 font-sans">
-			<div class="left-pane w-1/3 bg-gray-800">
-				<section class="self-center">
-					<img src="public/avatar.png" alt="Profile Picture" class="rounded-full w-64 max-h-64">
-				</section>
-
-				<section>
-					<h2>Personal Information</h2>
-					<hr>
-					<ul class="space-y-2">
-						<li class="flex items-center">
-							<img src="~@/public/icons/email.svg" alt="Email Icon" class="w-6 h-6 mr-2" />
-							<a :href="'mailto:' + cvData.personalInformation.email">{{ cvData.personalInformation.email }}</a>
-						</li>
-						<li class="flex items-center">
-							<img src="~@/public/icons/phone.svg" alt="Email Icon" class="w-6 h-6 mr-2" />
-							{{ cvData.personalInformation.phone }}
-						</li>
-						<li class="flex items-center">
-							<img src="~@/public/icons/location.svg" alt="Email Icon" class="w-6 h-6 mr-2" />
-							{{ cvData.personalInformation.address }}
-						</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Links</h2>
-					<hr>
-					<ul class="space-y-2">
-						<li v-for="link in cvData.links" class="flex items-center">
-							<img v-if="link.iconPath === 'github.png'" src="~@/assets/icons/github.png" class="w-5 mr-3" />
-							<img v-else-if="link.iconPath === 'gitlab.png'" src="~@/assets/icons/gitlab.png" class="w-5 mr-3" />
-							<img v-else-if="link.iconPath === 'nextcloud.png'" src="~@/assets/icons/nextcloud.png" class="w-5 mr-3" />
-							<img v-else-if="link.iconPath === 'linkedin.png'" src="~@/assets/icons/linkedin.png" class="w-5 mr-3" />
-							<a :href="link.url" target="_blank">
-								{{ link.name }}
-							</a>
-						</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Languages</h2>
-					<hr>
-					<ul class="grid gap-2 list-disc ml-4">
-						<li v-for="language in cvData.languages">{{ language.name }} ({{ language.level }})</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Hobbies</h2>
-					<hr>
-					<ul class="grid gap-2 list-disc ml-4">
-						<li v-for="hobby in cvData.hobbies">{{ hobby }}</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Skills</h2>
-					<hr>
-					<ul class="grid grid-cols-2 gap-2 list-disc ml-4">
-						<li v-for="skill in cvData.skills">{{ skill }}</li>
-					</ul>
-				</section>
-			</div>
-
-			<div class="right-pane w-2/3 bg-gray-200">
-				<section>
-					<h1 class="text-4xl font-bold">{{ cvData.title.fullName }}</h1>
-					<p class="text-xl">{{ cvData.title.role }}</p>
-				</section>
-
-				<section>
-					<h2>Professional Summary</h2>
-					<hr>
-					<p>{{ cvData.title.summary }}</p>
-				</section>
-
-				<section class="listing">
-					<h2>Education</h2>
-					<hr>
-					<ul>
-						<li v-for="education in cvData.education">
-							<div></div>
-							<div></div>
-							<h2>{{ education.school }}</h2>
-							<h3>{{ education.degree }}</h3>
-							<p>{{ education.start }} - {{ education.active ? "now (graduation expected in " + education.end + ")" : education.end }}</p>
-							<ul class="list-disc pl-4 mt-2">
-								<li v-for="text in education.text">{{ text }}</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-
-				<section class="listing">
-					<h2>Experience</h2>
-					<hr>
-					<ul>
-						<li v-for="experience in cvData.experience">
-							<div></div>
-							<div></div>
-							<h2>{{ experience.position }}</h2>
-							<h3>{{ experience.company }}</h3>
-							<p>{{ experience.start }} - {{ experience.active ? "now" : experience.end }}</p>
-							<ul class="list-disc pl-4 mt-2">
-								<li v-for="text in experience.text">{{ text }}</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-
-				<section class="listing">
-					<h2>Projects</h2>
-					<hr>
-					<ul>
-						<li v-for="project in cvData.projects">
-							<div></div>
-							<div></div>
-							<h2>{{ project.name }}</h2>
-							<p>{{ project.description }}</p>
-						</li>
-					</ul>
-				</section>
-			</div>
-		</div>
-		<div class="flex justify-center items-center w-full h-10 bg-gray-900 text-white gap-12">
-			<p class="text-xl text-center">© Christian Kranabetter 2024</p>
-		</div>
+	<div v-if="publicCVData" class="flex bg-gray-100 font-sans">
+		<PanePerson :email :phone :address :links :languages :hobbies :skills />
+		<PaneCareer :title :education :experience :internships :projects />
+	</div>
+	<div v-else class="flex items-center justify-center h-screen w-screen font-bold text-4xl bg-gray-200">
+		<p class="p-6 rounded-xl bg-gray-300 shadow-lg">Loading data...</p>
 	</div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 div.left-pane {
 	section {
-		@apply text-gray-200;
-
-		h2 {
-			@apply text-white;
-		}
+		@apply text-gray-100;
 	}
 }
 
 div.right-pane {
 	section {
-		@apply text-gray-800;
+		@apply text-gray-900;
 
-		h1 {
-			@apply text-black;
-		}
-
-		p {
-			@apply text-gray-800;
-		}
-
-		&.listing > ul > li {
+		&.dotted-listing ul li {
 			@apply relative ml-2 pl-5;
 
 			&>:first-child {
-				@apply absolute bg-gray-200 rounded-full h-4 w-4 border-2 border-gray-600 z-40;
+				@apply absolute bg-gray-100 rounded-full h-4 w-4 border-2 border-gray-600 z-40;
 			
 				top: 0.4rem;
 				left: -0.57rem;
@@ -187,12 +68,16 @@ div.right-pane {
 				@apply pb-4;
 			}
 		}
+
+		&.masonry-listing ul li {
+			@apply bg-gray-200 shadow-lg;
+		}
 	}
 }
 
 div.left-pane,
 div.right-pane {
-	@apply flex flex-col p-6 shadow-xl;
+	@apply flex flex-col p-6 shadow-xl print:min-h-screen;
 
 	section {
 		&:not(:last-child) {
@@ -211,9 +96,21 @@ div.right-pane {
 			@apply my-2 border-gray-500;
 		}
 
-		div {
+		div:not(.time) {
 			&:not(:last-child) {
 				@apply mb-4;
+			}
+		}
+
+		&.masonry-listing {
+			ul {
+				@apply flex flex-wrap gap-4;
+
+				li {
+					@apply p-4 rounded-lg h-auto flex-grow bg-gradient-to-br from-gray-200 to-gray-300;
+
+					width: 40%;
+				}
 			}
 		}
 	}
