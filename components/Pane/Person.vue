@@ -85,9 +85,14 @@ const skillLevelDisplays = [
 							class="w-5 mr-3"
 						/>
 						<img
-							v-else-if="link.iconPath === 'linkedin.png'"
-							src="~@/assets/icons/linkedin.png"
-							class="w-5 mr-3"
+								v-else-if="link.iconPath === 'linkedin.png'"
+								src="~@/assets/icons/linkedin.png"
+								class="w-5 mr-3"
+						/>
+						<img
+								v-else
+								src="~@/public/icons/web-light.svg"
+								class="w-5 mr-3"
 						/>
 						{{ link.name }}
 					</a>
