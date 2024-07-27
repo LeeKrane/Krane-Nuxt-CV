@@ -7,7 +7,7 @@ const { institutions = false } = defineProps<{
 <template>
 	<SectionGeneral class="dotted-listing" title="Education">
 		<ul>
-			<ItemInstitution v-for="institution in institutions" :institution />
+			<ItemInstitution v-for="institution in institutions" :institution :education="true" />
 		</ul>
 	</SectionGeneral>
 </template>
