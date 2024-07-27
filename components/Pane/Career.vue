@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const { title, education, experience, internships, projects } = defineProps<{
-	title?: TitleDTO
-	education?: InstitutionDTO[]
-	experience?: InstitutionDTO[]
-	internships?: InstitutionDTO[]
-	projects?: ProjectDTO[]
-}>()
+	title?: TitleDTO;
+	education?: InstitutionDTO[];
+	experience?: InstitutionDTO[];
+	internships?: InstitutionDTO[];
+	projects?: ProjectDTO[];
+}>();
 </script>
 
 <template>
@@ -19,22 +19,27 @@ const { title, education, experience, internships, projects } = defineProps<{
 			<p>{{ title.summary }}</p>
 		</SectionGeneral>
 
-		<SectionEducation
-			v-if="education"
-			:institutions="education" />
+		<div class="grid grid-cols-2">
+			<SectionEducation
+				v-if="education"
+				:institutions="education"
+				class="mr-4"
+			/>
+
+			<SectionExperience
+				v-if="internships"
+				title="Internships"
+				:institutions="internships"
+				class="ml-4"
+			/>
+		</div>
 
 		<SectionExperience
 			v-if="experience"
 			title="Experience"
-			:institutions="experience" />
+			:institutions="experience"
+		/>
 
-		<SectionExperience
-			v-if="internships"
-			title="Internships"
-			:institutions="internships" />
-
-		<SectionProjects
-			v-if="projects"
-			:projects="projects" />
+		<SectionProjects v-if="projects" :projects="projects" />
 	</div>
 </template>
