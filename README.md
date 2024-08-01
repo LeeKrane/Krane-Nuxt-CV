@@ -19,26 +19,52 @@ GitLab self-managed:
 `cd krane-nuxt-cv`
 
 ## Install dependencies
-`bun i`
+`bun i` or `npm i`
 
 ## Create your data
-Files: `assets/public-cv-data.json`, `assets/private-cv-data.json`
 
-### Data Format
-You can just replace the public data with yours. For the private data, the format is the following:
+Rename the file `assets/cv-data-template.json` to `assets/cv-data.json` and fill in your data.
 
-```json
-{
-	"email": "example@gmail.com",
-	"phone": "+123456789",
-	"address": "Iliketrains Street 2, 12345 Nuxtville"
-}
+Available skill levels and meanings (`skills[x].list[y].level`):
+
+```
+0 - proficient
+1 - good
+2 - decent
+3 - basic
+```
+
+Available tech stack items (`[internships | experience | projects][x].techStack`):
+
+!! non-case-sensitive !!
+
+```
+DaisyUI
+Discord.js
+Docker
+GitLab
+Java
+Nest.js
+Nextcloud
+Node.js
+Nuxt.js
+PiHole
+Portainer
+PostgreSQL
+Python
+RaspberryPi
+RockyLinux
+SCSS
+SpringBoot
+TailwindCSS
+Vue.js
+WireGuard
 ```
 
 ## Add your avatar
 Place your profile picture (square) here: `public/avatar.png`
 
 ## Start the development server
-`bun run dev`
+`bun run dev` or `npm run dev`
 
 Your resume is now available under http://localhost:3000/
