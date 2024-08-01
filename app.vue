@@ -1,32 +1,29 @@
 <script lang="ts" setup>
-	import publicCVDataRaw from '~/assets/public-cv-data.json'
-	import privateCVDataRaw from '~/assets/private-cv-data.json'
+	import cvDataRaw from 'assets/cv-data.json'
 
-	const publicCVData: Ref<PublicCVDTO | null> = ref(null)
-	const privateCVData: Ref<PrivateCVDTO | null> = ref(null)
+	const cvData: Ref<CV_DTO | null> = ref(null)
 
-	const email = computed(() => privateCVData.value?.email)
-	const phone = computed(() => privateCVData.value?.phone)
-	const address = computed(() => privateCVData.value?.address)
-	const links = computed(() => publicCVData.value?.links)
-	const languages = computed(() => publicCVData.value?.languages)
-	const hobbies = computed(() => publicCVData.value?.hobbies)
-	const skills = computed(() => publicCVData.value?.skills)
+	const email = computed(() => cvData.value?.email)
+	const phone = computed(() => cvData.value?.phone)
+	const address = computed(() => cvData.value?.address)
+	const links = computed(() => cvData.value?.links)
+	const languages = computed(() => cvData.value?.languages)
+	const hobbies = computed(() => cvData.value?.hobbies)
+	const skills = computed(() => cvData.value?.skills)
 
-	const title = computed(() => publicCVData.value?.title)
-	const education = computed(() => publicCVData.value?.education)
-	const experience = computed(() => publicCVData.value?.experience)
-	const internships = computed(() => publicCVData.value?.internships)
-	const projects = computed(() => publicCVData.value?.projects)
+	const title = computed(() => cvData.value?.title)
+	const education = computed(() => cvData.value?.education)
+	const experience = computed(() => cvData.value?.experience)
+	const internships = computed(() => cvData.value?.internships)
+	const projects = computed(() => cvData.value?.projects)
 
 	onMounted(() => {
-		publicCVData.value = publicCVDataRaw
-		privateCVData.value = privateCVDataRaw
+		cvData.value = cvDataRaw
 	})
 </script>
 
 <template>
-	<div v-if="publicCVData" class="flex bg-gray-100 font-sans">
+	<div v-if="cvData" class="flex bg-gray-100 font-sans">
 		<PanePerson :email :phone :address :links :languages :hobbies :skills />
 		<PaneCareer :title :education :experience :internships :projects />
 	</div>

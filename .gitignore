@@ -23,5 +23,5 @@ logs
 .env.*
 !.env.example
 
-assets/private-cv-data.json
+assets/cv-data.json
 public/avatar.png

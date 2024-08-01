@@ -44,13 +44,10 @@ type ProjectDTO = {
 	url?: string
 }
 
-type PrivateCVDTO = {
+type CV_DTO = {
 	email: string
 	phone: string
 	address: string
-}
-
-type PublicCVDTO = {
 	title: TitleDTO
 	links: LinkDTO[]
 	languages: LanguageDTO[]

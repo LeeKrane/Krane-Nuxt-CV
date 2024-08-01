@@ -1,0 +1,90 @@
+{
+	"email": "",
+	"phone": "",
+	"address": "",
+	"title": {
+		"fullName": "",
+		"role": "",
+		"summary": ""
+	},
+	"links": [
+		{
+			"name": "",
+			"url": "",
+			"iconPath": ""
+		}
+	],
+	"languages": [
+		{
+			"name": "",
+			"level": ""
+		}
+	],
+	"skills": [
+		{
+			"title": "",
+			"list": [
+				{
+					"name": "",
+					"level": 0,
+					"url": ""
+				}
+			]
+		}
+	],
+	"hobbies": [
+		"",
+		""
+	],
+	"education": [
+		{
+			"degreeOrPosition": "",
+			"institution": "",
+			"url": "",
+			"start": "",
+			"end": "",
+			"active": false,
+			"text": ""
+		}
+	],
+	"internships": [
+		{
+			"degreeOrPosition": "",
+			"institution": "",
+			"url": "",
+			"start": "",
+			"end": "",
+			"active": false,
+			"text": "",
+			"techStack": [
+				"",
+				""
+			]
+		}
+	],
+	"experience": [
+		{
+			"degreeOrPosition": "",
+			"institution": "",
+			"url": "",
+			"start": "",
+			"end": "",
+			"active": false,
+			"text": "",
+			"techStack": [
+				"",
+				""
+			]
+		}
+	],
+	"projects": [
+		{
+			"name": "",
+			"description": "",
+			"techStack": [
+				"",
+				""
+			]
+		}
+	]
+}
