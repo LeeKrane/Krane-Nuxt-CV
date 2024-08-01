@@ -1,0 +1,230 @@
+{
+	"email": "john.doe@example.com",
+	"phone": "+1234567890",
+	"address": "123 Main St, Anytown, USA",
+	"title": {
+		"fullName": "John Doe",
+		"role": "Software Developer",
+		"summary": "Experienced software developer with a strong background in full-stack development. Proficient in JavaScript, TypeScript, Vue.js, and Node.js. Skilled in creating efficient and scalable web applications."
+	},
+	"links": [
+		{
+			"name": "GitHub",
+			"url": "https://github.com/johndoe",
+			"iconPath": "github.png"
+		},
+		{
+			"name": "LinkedIn",
+			"url": "https://www.linkedin.com/in/johndoe/",
+			"iconPath": "linkedin.png"
+		}
+	],
+	"languages": [
+		{
+			"name": "English",
+			"level": "Native"
+		},
+		{
+			"name": "Spanish",
+			"level": "Fluent"
+		}
+	],
+	"skills": [
+		{
+			"title": "Programming languages",
+			"list": [
+				{
+					"name": "JavaScript",
+					"level": 0,
+					"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+				},
+				{
+					"name": "TypeScript",
+					"level": 1,
+					"url": "https://www.typescriptlang.org/"
+				},
+				{
+					"name": "Python",
+					"level": 2,
+					"url": "https://www.python.org/"
+				}
+			]
+		},
+		{
+			"title": "Frameworks",
+			"list": [
+				{
+					"name": "Vue.js",
+					"level": 0,
+					"url": "https://vuejs.org/"
+				},
+				{
+					"name": "Nuxt.js",
+					"level": 1,
+					"url": "https://nuxt.com/"
+				},
+				{
+					"name": "Nest.js",
+					"level": 2,
+					"url": "https://nestjs.com/"
+				}
+			]
+		},
+		{
+			"title": "Design",
+			"list": [
+				{
+					"name": "HTML",
+					"level": 0,
+					"url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+				},
+				{
+					"name": "CSS",
+					"level": 0,
+					"url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+				},
+				{
+					"name": "SCSS",
+					"level": 0,
+					"url": "https://sass-lang.com/documentation/syntax/"
+				},
+				{
+					"name": "TailwindCSS",
+					"level": 0,
+					"url": "https://tailwindcss.com/"
+				}
+			]
+		},
+		{
+			"title": "DevOps",
+			"list": [
+				{
+					"name": "Docker",
+					"level": 0,
+					"url": "https://www.docker.com/"
+				},
+				{
+					"name": "GitLab",
+					"level": 1,
+					"url": "https://about.gitlab.com/"
+				},
+				{
+					"name": "PostgreSQL",
+					"level": 2,
+					"url": "https://www.postgresql.org/"
+				}
+			]
+		}
+	],
+	"hobbies": [
+		"Web development",
+		"Open-source contributions",
+		"Reading tech blogs",
+		"Playing chess"
+	],
+	"education": [
+		{
+			"degreeOrPosition": "Bachelor of Science in Computer Science",
+			"institution": "Anytown University",
+			"url": "https://www.anytownuniversity.edu/",
+			"start": "09/2015",
+			"end": "06/2019",
+			"active": false,
+			"text": "Graduated with honors, specializing in software development and data structures."
+		},
+		{
+			"degreeOrPosition": "Master of Science in Software Engineering",
+			"institution": "Tech University",
+			"url": "https://www.techuniversity.edu/",
+			"start": "09/2020",
+			"end": "06/2022",
+			"active": true,
+			"text": "Focusing on advanced software engineering principles and practices."
+		}
+	],
+	"internships": [
+		{
+			"degreeOrPosition": "Software Development Intern",
+			"institution": "Tech Solutions Inc.",
+			"url": "https://www.techsolutions.com/",
+			"start": "06/2018",
+			"end": "08/2018",
+			"active": false,
+			"text": "Assisted in developing web applications using JavaScript and Vue.js.",
+			"techStack": [
+				"JavaScript",
+				"Vue.js"
+			]
+		},
+		{
+			"degreeOrPosition": "Backend Developer Intern",
+			"institution": "Innovative Tech",
+			"url": "https://www.innovativetech.com/",
+			"start": "06/2019",
+			"end": "08/2019",
+			"active": false,
+			"text": "Worked on backend services using Node.js and PostgreSQL.",
+			"techStack": [
+				"Node.js",
+				"PostgreSQL"
+			]
+		}
+	],
+	"experience": [
+		{
+			"degreeOrPosition": "Full Stack Developer",
+			"institution": "Creative Solutions",
+			"url": "https://www.creativesolutions.com/",
+			"start": "09/2022",
+			"active": true,
+			"text": "Developing and maintaining web applications using Vue.js, Node.js, and Docker.",
+			"techStack": [
+				"Vue.js",
+				"Node.js",
+				"Docker"
+			]
+		}
+	],
+	"projects": [
+		{
+			"name": "Task Manager",
+			"description": "A web application for managing tasks and projects.",
+			"techStack": [
+				"Vue.js",
+				"Node.js",
+				"PostgreSQL",
+				"Docker"
+			]
+		},
+		{
+			"name": "Portfolio Website",
+			"description": "Personal portfolio website showcasing projects and skills.",
+			"techStack": [
+				"Nuxt.js",
+				"Vue.js",
+				"TailwindCSS"
+			],
+			"url": "https://www.johndoe.com/"
+		},
+		{
+			"name": "E-commerce Platform",
+			"description": "Online shopping platform with user authentication and payment processing.",
+			"techStack": [
+				"Nuxt.js",
+				"Vue.js",
+				"Node.js",
+				"PostgreSQL",
+				"Docker"
+			]
+		},
+		{
+			"name": "Chat Application",
+			"description": "Real-time chat application using WebSocket.",
+			"techStack": [
+				"Node.js",
+				"Vue.js",
+				"Docker"
+			]
+		}
+	]
+}
