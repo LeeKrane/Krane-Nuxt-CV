@@ -38,9 +38,9 @@ const {
 				{{ institution.start }} -
 				{{
 					institution.active
-						? "now " + (education
-							? "(graduation expected in " + institution.end + ")"
-							: "(end expected in " + institution.end + ")")
+						? "now" + (education
+							? institution.end ? " (graduation expected in " + institution.end + ")" : ""
+							: institution.end ? " (end expected in " + institution.end + ")" : "")
 						: institution.end
 				}}
 			</p>
