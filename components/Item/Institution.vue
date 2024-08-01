@@ -46,5 +46,12 @@ const {
 			</p>
 		</div>
 		<p>{{ institution.text }}</p>
+		<div v-if="institution.techStack" class="flex gap-1 mt-2">
+			<TechSelector
+				v-for="tech in institution.techStack"
+				:key="tech"
+				:name="tech"
+			/>
+		</div>
 	</li>
 </template>

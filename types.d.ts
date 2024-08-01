@@ -28,6 +28,7 @@ type InstitutionDTO = {
 	end?: string
 	active?: boolean
 	text?: string
+	techStack?: string[]
 }
 
 type LinkDTO = {
@@ -39,6 +40,7 @@ type LinkDTO = {
 type ProjectDTO = {
 	name: string
 	description: string
+	techStack: string[]
 	url?: string
 }
 

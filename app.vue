@@ -103,13 +103,17 @@ div.right-pane {
 		}
 
 		&.masonry-listing {
-			ul {
-				@apply flex flex-wrap gap-4;
+			div.ul-container {
+				@apply flex gap-4;
 
-				li {
-					@apply p-4 rounded-lg h-auto flex-grow bg-gradient-to-br from-gray-200 to-gray-300;
+				ul {
+					@apply flex flex-wrap gap-4;
 
-					width: 40%;
+					li {
+						@apply p-4 rounded-lg h-auto flex-grow bg-gradient-to-br from-gray-200 to-gray-300;
+
+						height: fit-content;
+					}
 				}
 			}
 		}
