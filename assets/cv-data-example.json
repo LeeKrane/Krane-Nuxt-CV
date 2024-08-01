@@ -152,8 +152,8 @@
 			"active": false,
 			"text": "Assisted in developing web applications using JavaScript and Vue.js.",
 			"techStack": [
-				"JavaScript",
-				"Vue.js"
+				{ "name": "JavaScript" },
+				{ "name": "Vue.js" }
 			]
 		},
 		{
@@ -165,8 +165,8 @@
 			"active": false,
 			"text": "Worked on backend services using Node.js and PostgreSQL.",
 			"techStack": [
-				"Node.js",
-				"PostgreSQL"
+				{ "name": "Node.js" },
+				{ "name": "PostgreSQL" }
 			]
 		}
 	],
@@ -179,9 +179,9 @@
 			"active": true,
 			"text": "Developing and maintaining web applications using Vue.js, Node.js, and Docker.",
 			"techStack": [
-				"Vue.js",
-				"Node.js",
-				"Docker"
+				{ "name": "Vue.js" },
+				{ "name": "Node.js" },
+				{ "name": "Docker" }
 			]
 		}
 	],
@@ -190,19 +190,19 @@
 			"name": "Task Manager",
 			"description": "A web application for managing tasks and projects.",
 			"techStack": [
-				"Vue.js",
-				"Node.js",
-				"PostgreSQL",
-				"Docker"
+				{ "name": "Vue.js" },
+				{ "name": "Node.js" },
+				{ "name": "PostgreSQL" },
+				{ "name": "Docker" }
 			]
 		},
 		{
 			"name": "Portfolio Website",
 			"description": "Personal portfolio website showcasing projects and skills.",
 			"techStack": [
-				"Nuxt.js",
-				"Vue.js",
-				"TailwindCSS"
+				{ "name": "Nuxt.js" },
+				{ "name": "Vue.js" },
+				{ "name": "TailwindCSS" }
 			],
 			"url": "https://www.johndoe.com/"
 		},
@@ -210,20 +210,20 @@
 			"name": "E-commerce Platform",
 			"description": "Online shopping platform with user authentication and payment processing.",
 			"techStack": [
-				"Nuxt.js",
-				"Vue.js",
-				"Node.js",
-				"PostgreSQL",
-				"Docker"
+				{ "name": "Nuxt.js" },
+				{ "name": "Vue.js" },
+				{ "name": "Node.js" },
+				{ "name": "PostgreSQL" },
+				{ "name": "Docker" }
 			]
 		},
 		{
 			"name": "Chat Application",
 			"description": "Real-time chat application using WebSocket.",
 			"techStack": [
-				"Node.js",
-				"Vue.js",
-				"Docker"
+				{ "name": "Node.js" },
+				{ "name": "Vue.js" },
+				{ "name": "Docker" }
 			]
 		}
 	]

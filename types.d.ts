@@ -20,6 +20,12 @@ type SkillsetDTO = {
 	list: SkillDTO[]
 }
 
+type TechStackDTO = {
+	name: string
+	iconUrl?: string
+	url?: string
+}
+
 type InstitutionDTO = {
 	degreeOrPosition: string
 	institution: string
@@ -28,7 +34,7 @@ type InstitutionDTO = {
 	end?: string
 	active?: boolean
 	text?: string
-	techStack?: string[]
+	techStack?: TechStackDTO[]
 }
 
 type LinkDTO = {
@@ -40,7 +46,7 @@ type LinkDTO = {
 type ProjectDTO = {
 	name: string
 	description: string
-	techStack: string[]
+	techStack: TechStackDTO[]
 	url?: string
 }
 

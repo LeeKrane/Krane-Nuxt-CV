@@ -10,10 +10,12 @@ const { projects } = defineProps<{ projects: ProjectDTO[] }>()
 					<a :href="project.url" target="_blank"><h2>{{ project.name }}</h2></a>
 					<p>{{ project.description }}</p>
 					<div v-if="project.techStack" class="flex gap-1 mt-2">
-						<TechSelector
+						<Tech
 								v-for="tech in project.techStack"
-								:key="tech"
-								:name="tech"
+								:key="tech.name"
+								:name="tech.name"
+								:iconUrl="tech.iconUrl ?? ''"
+								:url="tech.url ?? ''"
 						/>
 					</div>
 				</li>
@@ -23,10 +25,12 @@ const { projects } = defineProps<{ projects: ProjectDTO[] }>()
 					<a :href="project.url" target="_blank"><h2>{{ project.name }}</h2></a>
 					<p>{{ project.description }}</p>
 					<div v-if="project.techStack" class="flex gap-1 mt-2">
-						<TechSelector
-								v-for="tech in project.techStack"
-								:key="tech"
-								:name="tech"
+						<Tech
+							v-for="tech in project.techStack"
+							:key="tech.name"
+							:name="tech.name"
+							:iconUrl="tech.iconUrl ?? ''"
+							:url="tech.url ?? ''"
 						/>
 					</div>
 				</li>

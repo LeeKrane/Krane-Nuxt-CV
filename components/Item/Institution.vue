@@ -47,10 +47,12 @@ const {
 		</div>
 		<p>{{ institution.text }}</p>
 		<div v-if="institution.techStack" class="flex gap-1 mt-2">
-			<TechSelector
+			<Tech
 				v-for="tech in institution.techStack"
-				:key="tech"
-				:name="tech"
+				:key="tech.name"
+				:name="tech.name"
+				:iconUrl="tech.iconUrl ?? ''"
+				:url="tech.url ?? ''"
 			/>
 		</div>
 	</li>
