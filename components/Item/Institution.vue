@@ -51,8 +51,9 @@ const {
 				v-for="tech in institution.techStack"
 				:key="tech.name"
 				:name="tech.name"
-				:iconUrl="tech.iconUrl ?? ''"
-				:url="tech.url ?? ''"
+				:icon-url="tech.iconUrl"
+				:href-url="tech.hrefUrl"
+				:tech-stack="tech"
 			/>
 		</div>
 	</li>

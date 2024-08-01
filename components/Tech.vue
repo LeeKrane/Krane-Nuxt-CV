@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const { name: nameRaw, iconUrl, url: urlRaw } = defineProps<{
+const { name: nameRaw, iconUrl, hrefUrl } = defineProps<{
 	name: string
 	iconUrl?: string
-	url?: string
+	hrefUrl?: string
 }>()
 
 const { name, iconName, url } = useTechStackMapping(nameRaw)
@@ -11,7 +11,7 @@ const { name, iconName, url } = useTechStackMapping(nameRaw)
 <template>
 	<a
 			class="flex items-center"
-			:href="url ? url : urlRaw"
+			:href="url ?? hrefUrl"
 			target="_blank"
 	>
 		<img

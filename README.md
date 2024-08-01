@@ -1,5 +1,7 @@
 # Krane Nuxt CV
 
+Example CV:
+
 ![Example CV](example-cv.png "Example CV")
 
 ## Clone the repository
@@ -75,3 +77,5 @@ Your resume is now available under http://localhost:3000/
 
 ## Generate a PDF
 Print to PDF from the browser (CTRL + P for Firefox), disable headers and footers, enable backgrounds, set margins to None and play around with the scaling to get the perfect single page fit.     
+
+Note that this project has been build for Firefox's print to PDF feature. Other browsers might not render the page correctly.

@@ -152,7 +152,11 @@
 			"active": false,
 			"text": "Assisted in developing web applications using JavaScript and Vue.js.",
 			"techStack": [
-				{ "name": "JavaScript" },
+				{
+					"name": "JavaScript",
+					"iconUrl": "https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/javascript.svg",
+					"hrefUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+				},
 				{ "name": "Vue.js" }
 			]
 		},

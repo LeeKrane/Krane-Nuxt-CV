@@ -23,7 +23,7 @@ type SkillsetDTO = {
 type TechStackDTO = {
 	name: string
 	iconUrl?: string
-	url?: string
+	hrefUrl?: string
 }
 
 type InstitutionDTO = {
