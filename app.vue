@@ -23,16 +23,36 @@
 </script>
 
 <template>
-	<div v-if="cvData" class="flex bg-gray-100 font-sans">
+	<div v-if="cvData" class="root-div flex bg-gray-100 font-sans">
 		<PanePerson :email :phone :address :links :languages :hobbies :skills />
 		<PaneCareer :title :education :experience :internships :projects />
 	</div>
-	<div v-else class="flex items-center justify-center h-screen w-screen font-bold text-4xl bg-gray-200">
+	<div v-else class="root-div flex items-center justify-center h-screen w-screen font-bold text-4xl bg-gray-200">
 		<p class="p-6 rounded-xl bg-gray-300 shadow-lg">Loading data...</p>
 	</div>
 </template>
 
 <style lang="scss">
+@media print {
+	html, body {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	@page {
+		size: A4;
+		margin: 0;
+	}
+
+	div.root-div {
+		div.left-pane,
+		div.right-pane {
+			@apply pb-32;
+		}
+	}
+}
+
 div.left-pane {
 	section {
 		@apply text-gray-100;
