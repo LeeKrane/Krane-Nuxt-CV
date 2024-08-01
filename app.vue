@@ -106,6 +106,8 @@ div.right-pane {
 				ul {
 					@apply flex flex-wrap gap-4;
 
+					width: 50%;
+
 					li {
 						@apply p-4 rounded-lg h-auto flex-grow bg-gradient-to-br from-gray-200 to-gray-300;
 
