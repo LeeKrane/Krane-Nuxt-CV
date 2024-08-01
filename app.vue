@@ -104,7 +104,7 @@ div.right-pane {
 				@apply flex gap-4;
 
 				ul {
-					@apply flex flex-wrap gap-4;
+					@apply flex flex-wrap gap-4 mb-auto;
 
 					width: 50%;
 
